@@ -1,0 +1,57 @@
+.content{
+    width: 85%;
+    margin: 0 auto;
+    padding: 150px 12% 50px;
+    text-align: center;
+    @include mediaQuery('medium'){
+        width: 100%;
+        padding: 100px 0 50px;
+
+    }
+    .title{
+        @include textStyle(48px, $fw-0, $color-black-1);
+        @include mediaQuery('medium'){
+            font-size: 24px;
+        }
+    }
+    .social{
+        justify-content: center;
+        vertical-align: middle;
+        align-items: center;
+        padding: 0 15px;
+        
+        img{
+            width: 18px;
+            height: 18px;
+            display: table-cell;
+        }
+        p{
+            @include textStyle($fs-0, $fw-0, $color-gray-3);
+            margin: 10px 10px;
+        }
+        .like{
+            align-items: center;
+        }
+        .comment{
+            align-items: center;
+            margin: 0 40px;
+        }
+        .share{
+            align-items: center;
+        }
+        @include mediaQuery('small'){
+            .comment{
+                margin: 0 12px;
+            }
+        }
+    }
+    .main__content{
+        text-align: justify;
+        margin: 50px 40px;
+    }
+    .fbComment{
+        @include mediaQuery('small'){
+            width: 500px;
+        }
+    }
+}

@@ -1,0 +1,141 @@
+.checkOut {
+  margin-top: 58px;
+  position: relative;
+  &.loadingDisplay {
+    display: none;
+  }
+  .checkout__left {
+    padding: 20px 10px;
+    text-align: center;
+    // border-right: 1px solid gray;
+    .checkout__title {
+      width: 80%;
+      margin: 0 auto !important;
+      text-align: left;
+      p {
+        font-size: 16px;
+      }
+    }
+    .listseat {
+      width: 80%;
+      justify-content: center;
+      margin: 35px auto 100px !important;
+
+      .seat {
+        background-color: #3e515d;
+        border-radius: 5px;
+        margin: 7px;
+        width: 4%;
+        height: 25px;
+        cursor: pointer;
+      }
+      .seatVip {
+        background-color: #f7b500;
+      }
+      .seatBooking {
+        background-color: #44c020 !important;
+      }
+      .seatBooked {
+        background-color: #d3dce6;
+        cursor: no-drop;
+      }
+    }
+    .typeseats {
+      justify-content: center;
+      margin-bottom: 30px;
+      align-items: center;
+      .typeseats__item {
+        width: 18%;
+        // text-align: left;
+        .typeseats__span {
+          display: block;
+          background-color: #3e515d;
+          border-radius: 5px;
+          width: 16%;
+          margin: 0 auto;
+          height: 25px;
+        }
+        .typeseats__vip {
+          background-color: #f7b500;
+        }
+        .typeseats__booking {
+          background-color: #44c020;
+        }
+
+        .typeseats__nobook {
+          background-color: #d3dce6;
+        }
+      }
+    }
+  }
+  .checkout__right {
+    text-overflow: ellipsis;
+    overflow-y: scroll;
+    padding: 20px 30px 20px 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    .right__items {
+      border-bottom: 1px dashed #e9e9e9;
+      padding: 15px 0;
+    }
+    .right__item__seat {
+      p {
+        margin-bottom: 0;
+        span {
+          font-size: 30px;
+          color: #44c020;
+          font-weight: 600;
+          margin-right: 15px;
+        }
+      }
+    }
+    .right__items:nth-child(1) {
+      text-align: center;
+      h4 {
+        font-size: 40px;
+        color: #44c020;
+      }
+    }
+    .right__items:nth-child(4) {
+      a {
+        cursor: pointer;
+      }
+    }
+    button {
+      width: 100%;
+    }
+  }
+  .checkout__drink {
+    // display: none;
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // text-overflow: ellipsis;
+    // background-color: #fff;
+    // overflow-y: scroll;
+    // padding: 20px 30px 20px 20px;
+    // box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    // text-align: left;
+    .drink__items {
+      border-bottom: 1px dashed #e9e9e9;
+      padding: 15px 0;
+      justify-content: space-between;
+      align-items: center;
+      img {
+        width: 50px;
+      }
+      .drink__title {
+        font-size: 18px;
+      }
+      .drink__count {
+        align-items: center;
+        span {
+          font-size: 25px;
+        }
+        button {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}

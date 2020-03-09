@@ -1,0 +1,94 @@
+#dashboard {
+  display: flex;
+  .dashboard__left {
+    width: 18%;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    background-color: #eeeeee;
+    padding: 10px;
+    position: fixed;
+    height: 1000px;
+    .left__top {
+      padding: 15px 0;
+      border-bottom: 1px solid #dcd5d5;
+      margin-bottom: 10px;
+      p {
+        margin-top: 15px;
+        font-size: 20px;
+        margin-bottom: 0;
+      }
+      a {
+        img {
+          width: 45px;
+        }
+      }
+      .nav-tabs {
+        justify-content: center;
+      }
+    }
+    .left__bot{
+      text-align: left;
+    }
+  }
+  .dashboard__right {
+    width: 82%;
+    margin-left: auto;
+    // height: 100%;
+    .right__top {
+      padding: 8px 0;
+      background-color: #616161;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .right__bot{
+      padding: 15px;
+      .tab-content{
+        .row{
+          .searchUser{
+            width: 30%;
+          }
+          .sort{
+            width: 15%;
+          }
+          .filter{
+            width: 15%;
+          }
+        }
+        table{
+          // .thStt{
+          //   width: 1%;
+          // }
+          .thTaiKhoan{
+            width: 8%;
+          }
+          // .thHoTen{
+          //   width: 14%;
+          // }
+          // .thEmail{
+          //   width: 15%;
+          // }
+          // .thSdt{
+          //   width: 15%;
+          // }
+          // .thMaLoai{
+          //   width: 15%;
+          // }
+          // .thPass{
+          //   width: 12%;
+          // }
+          .thSetting{
+            width: 16%;
+          }
+          .movieImg{
+            img{
+              width: 100px;
+            }
+          }
+        }
+        .movieSearch{
+          width: 50%;
+        }
+      }
+    }
+  }
+}

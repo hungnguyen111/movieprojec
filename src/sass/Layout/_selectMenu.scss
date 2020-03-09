@@ -1,0 +1,68 @@
+.selectMenu{
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    margin-left: 12.5%;
+    margin-top: -40px;
+    background: white;
+    padding: 20px 0;
+    width: 75%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
+    @include mediaQuery('large'){
+        display: none;
+    }
+    .form-control{
+        border: none;
+        &:focus{
+            box-shadow: none;
+        }
+    }
+    .selectCinema{
+        position: relative;
+        .selectMenuChild{
+            width: 98%;
+            cursor: pointer;
+            @include textStyle($fs-0, $fw-0, $color-black);
+        }
+        &:after{
+            content: '';
+            position: absolute;
+            right: 0;
+            height: 30px;
+            top: 50%;
+            width: 3px;
+            transform: translateY(-50%);
+            border-right: 1px solid #fff;
+            border-right-color: rgba(238,238,238,.88);
+        }
+    }
+    .selectCinema:nth-child(2),.selectCinema:nth-child(3),.selectCinema:nth-child(4){
+        width: 20%;
+    }
+    .selectMenuChild{
+        width: 19%;
+        cursor: pointer;
+        @include textStyle($fs-0, $fw-0, $color-black);
+        position: relative;
+        div:nth-child(1){
+            padding: 0 20px;
+        }
+    }
+    .selectCinema{
+        width: 24%;
+    }
+    .buttonSelect{
+        margin: 0 auto;
+        button{
+            
+            @include textStyle($fs-0, $fw-0, $color-white);
+        }
+        button.selectedMovie{
+            background-color: #fb4226;
+            border-color:#fb4226;
+        }
+    }
+}

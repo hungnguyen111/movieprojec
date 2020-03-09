@@ -1,0 +1,62 @@
+.homeCinemaTop {
+  justify-content: center;
+  border-bottom: none;
+  margin-bottom: 40px;
+  img {
+    width: 100%;
+    height: 60px;
+    margin: 0 10px;
+    opacity: 0.5;
+  }
+}
+.detailControl {
+  margin-bottom: 40px;
+  margin: 40px auto;
+  .nav {
+    padding-left: 40%;
+    @include mediaQuery("small") {
+      padding-left: 7%;
+    }
+    li {
+      margin-right: 40px;
+      @include mediaQuery("small") {
+        margin-right: 0;
+        // padding-top: 20px;
+      }
+      &:hover {
+        a {
+          transform: scale(1.3);
+          transition: all 0.3s;
+          @include mediaQuery("small") {
+            transform: scale(1.1);
+          }
+        }
+      }
+      .nav-link {
+        padding: 0;
+      }
+      a {
+        @include textStyle(20px, $fw-0, $color-black);
+        line-height: 24px;
+        height: 24px;
+        @include mediaQuery("small") {
+          margin-right: 18px;
+          padding-top: 10px;
+          font-size: 17px;
+          height: 0;
+        }
+      }
+      a.active {
+        color: #fa5238;
+        transform: scale(1.3);
+        cursor: context-menu;
+        @include mediaQuery("small") {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+.homeCinemaComplex .homeCinema .homeCinemaPosition .cinema__position__control .displayNone{
+  display: none !important;
+}

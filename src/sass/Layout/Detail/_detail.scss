@@ -1,0 +1,64 @@
+.loadingDisplay {
+  display: none;
+}
+.detailMovie {
+  background-color: #f2f4f5;
+  margin-top: 58px;
+  padding: 50px;
+  .detailImg {
+    padding-right: 15px;
+    text-align: right;
+  }
+  .detailContent {
+    padding: 40px 20px;
+    .pointNumber {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    p {
+      font-size: 16px;
+      span {
+        font-weight: bold;
+      }
+    }
+    .point {
+      i {
+        color: #fb4226;
+      }
+    }
+    .detailBuy {
+      margin-top: 20px;
+      font-weight: 600;
+      display: block;
+      width: 100px;
+      border-radius: 4px;
+      font-size: 16px;
+      padding: 8px 12px;
+      text-align: center;
+      background: #fb4226;
+      text-decoration: none;
+      color: white;
+      cursor: pointer;
+      a{
+        text-decoration: none;
+        color: white;
+      }
+    }
+  }
+  .detailPoint {
+      margin-top: 70px;
+    .pointNumber {
+      font-size: 70px;
+      color: #fb4226;
+      border: 10px solid #7ed321;
+      border-radius: 50%;
+      padding: 0 29px;
+      border-radius: 50%;
+    }
+    i{
+        font-size: 20px;
+        color: #fb4226;
+        margin-top: 12px;
+    }
+  }
+}

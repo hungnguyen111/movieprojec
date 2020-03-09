@@ -1,0 +1,40 @@
+@mixin textStyle($fs, $fw, $color){
+    font-size: $fs;
+    font-weight: $fw;
+    color: $color;
+}
+
+@mixin buttonStyle($bg-color, $color, $hover-color, $bd-color, $bg-hover, $fs){
+    background-color: $bg-color;
+    color:  $color;
+    font-size: $fs;
+    border: 1px solid $bd-color;
+    &:hover{
+        color: $hover-color;
+        background-color: $bg-hover;
+        border: 1px solid $bg-hover;
+    }
+    &:focus{
+        box-shadow: none;
+        &:active{
+        box-shadow: none;
+        }
+    }
+    &:active{
+        color: $hover-color;
+        background-color: $bg-hover;
+        border: 1px solid $bg-hover;
+    }
+}
+
+@mixin mediaQuery($sceen){
+    @if map-has-key($map: $breakpoints , $key: $sceen){
+        $value: map-get($map: $breakpoints , $key: $sceen);
+        @media screen and (max-width: $value){
+            @content;
+        }
+    }
+    @else{
+        @warn "`{$screen}` khong on tai";
+    }
+}

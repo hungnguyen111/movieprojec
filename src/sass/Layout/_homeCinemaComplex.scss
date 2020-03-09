@@ -1,0 +1,159 @@
+.homeCinemaComplex{
+    width: 100%;
+    margin: 0 auto;
+    @include mediaQuery('small'){
+        // display: none;
+    }
+    img{
+        height: 120px;
+        width: 100%;
+    }
+    .homeCinema{
+        width: 70%;
+        margin: 0 auto;
+        .homeCinemaTop{
+            justify-content: center;
+            border-bottom: none;
+            margin-bottom: 40px;
+            a{
+                border: none;
+                position: relative;
+                &:hover{
+                    img{
+                        opacity: 1;
+                    }
+                }
+                &::after{
+                    position: absolute;
+                    background-color: #e4e2e2;
+                    content: '';
+                    top: 15%;
+                    right: 0;
+                    width: 1px;
+                    height: 70%;
+                }
+                img{
+                    width: 50px;
+                    height: 50px;
+                    margin: 0 10px;
+                    opacity: 0.5;
+                }
+            }
+            a.active{
+                img{
+                    opacity: 1;
+                }
+            }
+        }
+        .homeCinemaPosition{
+            .cinema__position__control{
+                width: 40%;
+                height: 500px;
+                overflow-y: scroll;
+                overflow-x: hidden;
+                .nav-link{
+                    padding: 0;
+                    opacity: 0.5;
+                    &.active{
+                        background-color: transparent;
+                        transition: all .5s;
+                        opacity: 1;
+                    }
+                    &:hover{
+                        transition: all .5s;
+                        opacity: 1;
+                    }
+                }
+                .cinemaLeft{
+                    padding: 5px;
+                    height: 100px;
+                    overflow: hidden;
+                    cursor: pointer;
+                    border-bottom: 1px solid rgba(238,238,238,.88);
+                    &:hover{
+                        opacity: 1;
+                    }
+
+                    &.row{
+                        margin-right: 0;
+                        margin-left: 0;
+                    }
+                    .cinemaLeftLeft{
+                        width: 20%;
+                        img{
+                            margin: 12px 5px;
+                            width: 50px;
+                            height: 50px;
+
+                        }
+                    }
+                    .cinemaLeftRight{
+                        width: 80%;
+                        padding: 6px 10px;
+                        span:nth-child(1){
+                            @include textStyle(14px, $fw-0, $color-black);
+                        }
+                        .address{
+                            text-overflow: ellipsis;
+                            overflow-x: hidden;
+                            margin-bottom: 0;
+                            @include textStyle(12px, $fw-0, $color-gray-3);
+                        }
+                        a{
+                            text-decoration: none;
+                            @include textStyle(12px, $fw-0, $color-red);
+                        }
+                    }
+                }
+            }
+            .cinema__position__content{
+                width: 60%;
+                padding: 0 5px;
+                height: 500px;
+                overflow-y: scroll;
+                overflow-x: hidden;
+                .row{
+                    margin-right: 0;
+                    margin-left: 0;
+                }
+                .tab-pane{
+                    border-bottom: 1px solid rgba(238,238,238,.88);
+                    a{
+                        padding: 5px 10px;
+                        border: 1px solid gray;
+                        border-radius: 8px;
+                        display: inline-block;
+                        text-decoration: none;
+                        margin: 5px 10px 5px 0;
+                        color: #108f3e;
+                        font-size: 18px;
+                        font-weight: bold;
+                        cursor: pointer;
+                        &:hover{
+                            color: $color-red;
+                            transition: all .5s;
+                        }
+                    }
+                }
+                .cinemaRight{
+                    cursor: pointer;
+                    padding: 5px;
+                    height: 90px;
+                    overflow: hidden;
+                    position: relative;
+                    
+                    .cinemaRightLeft{
+                        width: 15%;
+                        img{
+                            width: 50px;
+                            height: 50px;
+                        }
+                    }
+                    .cinemaRightRight{
+                        width: 85%;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,209 @@
+.homeMovie {
+  width: 71%;
+  margin: 0 auto;
+  @include mediaQuery("small") {
+    width: 95%;
+    padding-top: 30px;
+  }
+  .tabControl {
+    margin-bottom: 40px;
+    .nav {
+      padding-left: 35%;
+      @include mediaQuery("medium") {
+        padding-left: 28%;
+      }
+      @include mediaQuery("small") {
+        padding-left: 18%;
+      }
+      li {
+        margin-right: 40px;
+        @include mediaQuery("small") {
+          margin-right: 0;
+          padding-top: 14px;
+        }
+        &:hover {
+          a {
+            transform: scale(1.3);
+            transition: all 0.3s;
+            @include mediaQuery("small") {
+              transform: scale(1.1);
+            }
+          }
+        }
+        .nav-link {
+          padding: 0;
+        }
+        a {
+          @include textStyle(20px, $fw-0, $color-black);
+          line-height: 24px;
+          height: 24px;
+          @include mediaQuery("small") {
+            margin-right: 35px;
+            padding-top: 10px;
+            font-size: 18px;
+            height: 0;
+          }
+        }
+        a.active {
+          color: #fa5238;
+          transform: scale(1.3);
+          cursor: context-menu;
+          @include mediaQuery("small") {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+
+  .homeMovie__now,
+  .homeMovie__comming {
+    justify-content: space-between;
+    .myHomeMovie {
+      justify-content: space-between;
+      padding: 0 10px;
+      .card {
+        border: none;
+        width: 25%;
+        padding: 0 10px;
+        margin-bottom: 25px;
+        position: relative;
+        cursor: pointer;
+        @include mediaQuery("small") {
+          width: 100%;
+        }
+        &:hover {
+          .card-body {
+            display: none;
+          }
+          .filmDetail {
+            .showHoverImg {
+              display: block;
+              transition: all 0.4s;
+            }
+          }
+          .showHover {
+            a {
+              display: block;
+              transition: all 0.5s;
+            }
+          }
+        }
+        .filmDetail {
+          position: relative;
+          width: 100%;
+          img {
+            height: 340px;
+            border-radius: 4px;
+            background-position: center, 0 0;
+            background-size: 100% auto;
+            background-repeat: no-repeat, repeat-y;
+          }
+          .showHoverImg {
+            display: none;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: linear-gradient(to top, #000, transparent 100%);
+            border-radius: 4px;
+            a {
+              img {
+                position: absolute;
+                top: 45%;
+                left: 40%;
+                width: 55px;
+                height: 55px;
+              }
+            }
+          }
+        }
+        .card-body {
+          padding: 0 1px;
+          @include mediaQuery("small") {
+            display: none;
+          }
+          h5 {
+            @include textStyle($fs-1, $fw-2, $color-black);
+            line-height: 22px;
+            margin-top: 10px;
+            height: 40px;
+          }
+        }
+        .showHover {
+          a {
+            margin-top: 20px;
+            position: absolute;
+            display: block;
+            width: 92%;
+            border-radius: 4px;
+            font-size: 18px;
+            padding: 10px;
+            text-align: center;
+            background: #fb4226;
+            text-decoration: none;
+            color: white;
+            display: none;
+          }
+        }
+        .ageType {
+          position: absolute;
+          top: 12px;
+          left: 24px;
+          background-color: #fb4226;
+          border-radius: 4px;
+          padding: 0 5px;
+          color: #fff;
+          min-width: 33px;
+          text-align: center;
+        }
+        .avgPoint {
+          font-size: 16px;
+          background-color: rgba(12, 27, 54, 0.8);
+          border: 1px solid #1f2e46;
+          border-radius: 4px;
+          padding: 2px;
+          position: absolute;
+          top: 12px;
+          right: 24px;
+          color: #fff;
+          width: 64px;
+          text-align: center;
+          line-height: 1.1;
+          p:nth-child(1) {
+            text-align: center;
+            transform: scaleY(1.1);
+            margin-bottom: 0;
+          }
+          p:nth-child(2) {
+            margin: 0 !important;
+            text-align: center;
+            // font-size: 8px;
+            img {
+              border-radius: 4px;
+              display: inline-block;
+              // width: 100%;
+              max-width: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+  #modalTrailer {
+    .modal-content {
+      margin-top: 130px;
+    }
+    .modal-body {
+      margin: -50px 0;
+      position: relative;
+      margin-left: -120px;
+      .close {
+        position: absolute;
+        right: -30%;
+        top: -1%;
+      }
+    }
+  }
+}

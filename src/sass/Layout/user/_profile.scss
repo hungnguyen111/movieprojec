@@ -1,0 +1,30 @@
+#profile {
+  display: flex;
+  margin-top: 120px;
+  .profile__left {
+    width: 25%;
+    // padding: 0 40px;
+    border-right: 1px solid #ded9d9;
+    .left__top {
+      text-align: center;
+      img {
+        width: 150px;
+        border-radius: 73px;
+      }
+    }
+    .tab-pane {
+      background: #e0dddd;
+      width: 80%;
+      margin: 30px auto;
+    }
+  }
+  .profile__right {
+    width: 75%;
+    padding: 0 15px;
+    .right__bot{
+        .profileSearch{
+            width: 50%;
+        }
+    }
+  }
+}

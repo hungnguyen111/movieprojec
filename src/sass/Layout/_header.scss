@@ -1,0 +1,97 @@
+header {
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  left: 0;
+  z-index: 12;
+  top: 0;
+  width: 100%;
+  .navHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 20px;
+    @include mediaQuery("medium") {
+      padding: 4px 20px;
+    }
+    @include mediaQuery("small") {
+      padding: 4px;
+      padding-right: 24px;
+
+    }
+    .logo {
+      width: 50px;
+    }
+    .navButton {
+      display: none;
+      @include mediaQuery("medium") {
+        display: block;
+      }
+      img {
+        text-align: right;
+        width: 25px;
+        padding: 17px 0;
+        @include mediaQuery("small") {
+          margin-right: 41px;
+        }
+      }
+    }
+    ul {
+      margin: 0 auto 0 35% !important;
+      @include mediaQuery("large") {
+        margin: 0 auto 0 10% !important;
+      }
+      @include mediaQuery("small") {
+        display: none;
+      }
+      li {
+        list-style: none;
+        margin-right: 20px;
+        a {
+          text-decoration: none;
+          @include textStyle($fs-0, $fw-0, $color-black);
+        }
+      }
+    }
+    .navRight {
+      display: flex;
+      align-items: center !important;
+      @include mediaQuery("small") {
+        float: right;
+        margin-top: -40px;
+      }
+      .logoutButton {
+        box-shadow: none;
+
+      }
+      .avatar {
+        @include textStyle($fs-0, $fw-0, black);
+        position: relative;
+        text-decoration: none;
+        cursor: pointer;
+        margin-right: 15px;
+        @include mediaQuery("small") {
+          font-size: 13px;
+          margin-right: 5px;
+          margin-left: 5px !important;
+        }
+        img {
+          height: auto;
+          width: 30px;
+          border-radius: 25px;
+          margin-right: 5px;
+        }
+      }
+      p {
+        font-size: 15px;
+        margin-bottom: 0;
+        @include mediaQuery("small") {
+          font-size: 13px;
+        }
+      }
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}

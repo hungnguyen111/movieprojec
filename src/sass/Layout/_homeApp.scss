@@ -1,0 +1,77 @@
+.homeApp{
+    .footer__top__bg{
+        background-image: url(../../backapp.jpg);
+        .footer__top{
+            padding: 120px 0 80px 0;
+            width: 65%;
+            margin: 0 auto;
+            @include mediaQuery('small'){
+                width: 90%;
+                padding: 50px 0 80px 0;
+
+            }
+            .footer__left{
+                width: 50%;
+                @include mediaQuery('large'){
+                    text-align: center;
+                    width: 100%;
+                }
+                p:nth-child(1){
+                    line-height: 46px;
+                    @include textStyle($fs-2 +6, $fw-1, $color-white);
+                    @include mediaQuery('small'){
+                        font-size: 24px;
+                    }
+                }
+                p:nth-child(2){
+                    padding: 20px 0;
+                    @include textStyle($fs-1, $fw-0, $color-white);
+                }
+                button{
+                    padding: 10px 20px;
+                    background-color: $color-red;
+                    @include textStyle($fs-1, $fw-1, $color-white);
+                }
+                p:last-child{
+                    padding-top: 10px;
+                    @include textStyle($fs-1, $fw-0, $color-white);
+                    a{
+                        text-decoration: none;
+                        border-bottom: 1px solid white;
+                        @include textStyle($fs-1, $fw-0, $color-white);
+                    }
+                }
+            }
+            .footer__right{
+                width: 50%;
+                text-align: center;
+                position: relative;
+                // padding: 0;
+                @include mediaQuery('large'){
+                    width: 100%;
+                }
+                .footer__right__img{
+                    display: block;
+                    max-width: 100%;
+                    height: auto;
+                    // margin: 0 !important;
+                    padding: 0 28%;
+                }
+
+                .slideInPhone{
+                    position: absolute;
+                    padding: 10% 29.6% 5% 29.6%;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: auto;
+                    cursor: pointer;
+                    img{
+                        max-width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}
